@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Invoice System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Smart Invoice System</h1>
+
+        ```
+        <div class="customer">
+            <input type="text" id="customerName" placeholder="Customer Name">
+            <input type="email" id="customerEmail" placeholder="Customer Email">
+        </div>
+
+        <div class="item-input">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <input type="number" id="itemPrice" placeholder="Price">
+            <input type="number" id="itemQty" placeholder="Quantity">
+            <button onclick="addItem()">Add Item</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceBody"></tbody>
+        </table>
+
+        <div class="summary">
+            <p>Subtotal: ₹<span id="subtotal">0</span></p>
+            <p>GST (18%): ₹<span id="tax">0</span></p>
+            <h3>Total: ₹<span id="total">0</span></h3>
+        </div>
+
+        <button onclick="generateInvoice()">Generate Invoice</button>
+        <button onclick="window.print()">Download / Print</button>
+        ```
+
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
